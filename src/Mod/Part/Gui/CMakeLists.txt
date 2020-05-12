@@ -179,6 +179,8 @@ SET(PartGui_SRCS
     SoBrepFaceSet.h
     SoBrepPointSet.cpp
     SoBrepPointSet.h
+    SoBrepIndexedPointSet.cpp
+    SoBrepIndexedPointSet.h
     ViewProvider.cpp
     ViewProvider.h
     ViewProviderAttachExtension.h
