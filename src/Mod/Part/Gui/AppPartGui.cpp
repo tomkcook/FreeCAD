@@ -34,6 +34,7 @@
 #include "SoBrepFaceSet.h"
 #include "SoBrepEdgeSet.h"
 #include "SoBrepPointSet.h"
+#include "SoBrepIndexedPointSet.h"
 #include "SoFCShapeObject.h"
 #include "ViewProvider.h"
 #include "ViewProviderExt.h"
@@ -146,6 +147,7 @@ PyMOD_INIT_FUNC(PartGui)
     PartGui::SoBrepFaceSet                          ::initClass();
     PartGui::SoBrepEdgeSet                          ::initClass();
     PartGui::SoBrepPointSet                         ::initClass();
+	PartGui::SoBrepIndexedPointSet                  ::initClass();
     PartGui::SoFCControlPoints                      ::initClass();
     PartGui::ViewProviderAttachExtension            ::init();
     PartGui::ViewProviderAttachExtensionPython      ::init();
