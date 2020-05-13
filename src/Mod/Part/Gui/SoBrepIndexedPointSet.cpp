@@ -199,7 +199,7 @@ void SoBrepIndexedPointSet::renderHighlight(SoGLRenderAction *action, SelContext
     if(coords3d) {
         if(id == INT_MAX) {
             glBegin(GL_POINTS);
-            for(int ii = 0; ii < this->coordIndex.getNum(); ++ii) {
+            for(size_t ii = 0; ii < this->coordIndex.getNum(); ++ii) {
                 auto idx = this->coordIndex[ii];
                 glVertex3fv((const GLfloat*) (coords3d + idx));
             }
@@ -208,8 +208,9 @@ void SoBrepIndexedPointSet::renderHighlight(SoGLRenderAction *action, SelContext
             SoDebugError::postWarning("SoBrepIndexedPointSet::renderHighlight", "highlightIndex out of range");
         }
         else {
+			auto idx = this->coordIndex[id];
             glBegin(GL_POINTS);
-            glVertex3fv((const GLfloat*) (coords3d + this->coordIndex[id]));
+            glVertex3fv((const GLfloat*) (coords3d + idx));
             glEnd();
         }
     }
